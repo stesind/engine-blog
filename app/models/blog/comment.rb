@@ -1,5 +1,6 @@
 module Blog
-  class Comment < ActiveRecord::Base
-    attr_accessible :post_id, :text
-  end
+	class Comment < ActiveRecord::Base
+	  belongs_to :post
+	  attr_accessible :body, :commenter
+	end
 end

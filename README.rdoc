@@ -1,3 +1,25 @@
 = Blog
 
-This project rocks and uses MIT-LICENSE.
+Provides blog functionallity for a rails application.
+
+== License
+
+This project is copyright of Steffen Sindzinski and uses MIT-LICENSE. Please see the file MIT-LICENSE.
+
+== Installation
+
+Edit the Gemfile and add
+        gem 'blog', :git => 'git://github.com/stesind/engine-blog.git'
+
+Run bundle install to install all required gems
+        bundle install
+
+Copy migrations from deviseadmin
+        rake railties:install:migrations
+
+Run migrations
+        rake db:migrate
+
+Add to your routes file
+        mount Blog::Engine, :at => "/blog"
+
